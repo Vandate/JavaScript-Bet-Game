@@ -1,0 +1,13 @@
+.container {
+    background-color: deepskyblue;
+}
+
+#game_over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: red;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}

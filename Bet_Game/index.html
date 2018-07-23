@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bet Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="js/app.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col">
+                    <h1 class="text-center text-white">Bet Game</h1>
+                    <h2 class="text-warning" id="balance">Balance: 0$</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <!--<form class="text-center">-->
+                <div class="form-group text-white">
+                    <label for="money">Enter Your Bet Amount Here:</label>
+                    <input type="number" placeholder = "Enter amount of money you want to play...." class="form-control" id="money" min="0" max="999999999" maxlength="9">
+                    <button type="submit" onclick="SetBalance()" class="btn btn-success btn-lg" id="set_balance_button">Set Balance</button>
+                </div>
+            <!--</form>-->
+
+            <!--<form class="text-center">-->
+                <div class="form-group text-white">
+                    <label for="bet_number" id="text">Enter Your Bet Number(0-99) Here:</label>
+                    <input type="number" placeholder="Enter the number (between 0-99)...." class="form-control" id="bet_number" min="0" max="99" maxlength="2">
+                </div>
+                <div class="form-group text-white">
+                    <label for="bet_amount">Enter The Amount You Want to Bet Here:</label>
+                    <input type="number" placeholder="Enter amount of money you want to bet...." class="form-control" id="bet_amount" min="0">
+                </div>
+
+                <div class="col">
+                    <button type="submit" onclick="GetInput()" class="btn btn-success btn-lg" id="start_button">Start</button>
+                    <button type="button" onclick="CompareGuesses()" class="btn btn-danger btn-lg" id="stop_button">Stop</button>
+                </div>
+                <br>
+            <div>
+                <button type="button" onclick="PlayAgain()" class="btn btn-primary btn-lg" id="play_again_button">Play Again</button>
+            </div>
+            <br>
+            <button type="button" onclick="Reset()" class="btn btn-warning btn-lg" id="reset_button">PLAY AGAIN</button>
+            <!--</form>-->
+            <div id="overlay">
+                <h2 id="game_over" class="close">Opps!!! Look like you lost all your money.</h2>
+            </div>
+        </div>
+        <br>
+    </div>
+</body>
+</html>
